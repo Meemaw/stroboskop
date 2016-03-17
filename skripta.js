@@ -9,8 +9,16 @@ window.addEventListener('load', function() {
         document.getElementById("barve").appendChild(input);
 	}
 	
+	var odstrani = function(event) {
+		 document.getElementById("barve").textContent="";
+	}
+	
 	document.querySelector("#novaBarva") 
 		.addEventListener('click', dodajBarvo);
+		
+	document.querySelector("#odstraniBarve")
+		.addEventListener('click', odstrani);
+
 		
 	//Odstrani barve
 	
@@ -53,6 +61,8 @@ window.addEventListener('load', function() {
 		start.removeEventListener('click', zagon);
 		start.addEventListener('click', stop);
 	}
+	
+
 	
 	document.querySelector("#start").addEventListener('click', zagon);
 	
